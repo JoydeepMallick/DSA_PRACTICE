@@ -1,0 +1,18 @@
+https://www.javatpoint.com/binary-tree
+https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+
+please read the link below for doubts in c and c++ related to pointer and reference:-
+
+remember that C is has no concept of passs by reference, passing pointers is kind of vague since its that we passing a pointer to a reference not the reference itself. C++ supports the same. hence void func(int& x) possible in C++.
+
+reference refers to address of varible hence any change made will be reflected in address and all the varibles associated with that address.
+
+pointer points to a particular address which can be made to point to a different location.
+
+https://stackoverflow.com/questions/4629317/what-does-int-mean
+
+read more in scott meyers book, effective C++.
+
+to do:
+
+zigzag traversal
