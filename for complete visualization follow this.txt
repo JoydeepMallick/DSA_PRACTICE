@@ -1,0 +1,11 @@
+http://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+
+https://stackoverflow.com/questions/29580238/which-element-is-the-middle-in-a-b-tree-of-even-order
+
+
+
+
+
+https://stackoverflow.com/questions/24882357/stdpair-vs-array
+
+https://godbolt.org/
