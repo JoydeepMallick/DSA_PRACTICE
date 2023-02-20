@@ -1,0 +1,8 @@
+tree from prefix
+
+https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/
+
+
+tree from postfix
+
+https://www.geeksforgeeks.org/expression-tree/
