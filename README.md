@@ -6,13 +6,15 @@ Contains all the possible DSA codes I made over time, feel free to use it, will 
 ## Youtube channels I prefer to study
     
 <h3> Best for indepth understanding and code explanation </h3>
-1. [Raj_Vikramaditya(aka_Striver)](https://www.youtube.com/channel/UCJskGeByzRRSvmOyZOz61ig)
+1. [Raj_Vikramaditya_aka_Striver](https://www.youtube.com/channel/UCJskGeByzRRSvmOyZOz61ig)
     
 <h3> Best for theoretical understanding of DSA </h3>
 
 2. [Jennys_lectures](https://www.youtube.com/channel/UCM-yUTYGmrNvKOCcAl21g3w)
 
 3. [Gate_smashers](https://www.youtube.com/channel/UCJihyK0A38SZ6SdJirEdIOw)
+
+4. [Abdul_Bari](https://www.youtube.com/@abdul_bari) 
 
 <h3> Best for guideline or roadmaps </h3>
 
