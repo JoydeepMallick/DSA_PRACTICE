@@ -22,8 +22,8 @@ int totalPaths_iterDP(int destrow, int destcol, vector<vector<int>> &dp){
            else
            {
                int left = 0, up = 0;
-               if(i>0) left = dp[i-1][j];
-               if(j>0) up = dp[i][j-1];
+               if(i>0) up = dp[i-1][j];
+               if(j>0) left = dp[i][j-1];
                dp[i][j] = left + up;
            }
         }
@@ -38,12 +38,12 @@ int totalPaths_optDP(int destrow, int destcol){
     for (int i = 0; i <= destrow; i++) {
         vector<int> currow(destcol+1, -1);
         for (int j = 0; j <= destcol; j++) {
-            if(i == 0 && j == 0) prevrow[i] = 1;
+            if(i == 0 && j == 0) currow[j] = 1;
             else{
                 int left = 0, up = 0;
-                if(i > 0) left = currow[i-1];
-                if(j > 0) up = prevrow[i];
-                currow[i] = left + up;
+                if(i > 0) up = prevrow[j];//similar to iterative just i index is removed
+                if(j > 0) left = currow[j-1];
+                currow[j] = left + up;
             }
         }
         //reset prevrow    
