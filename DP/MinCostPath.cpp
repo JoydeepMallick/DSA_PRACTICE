@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <bit>
+#include <ostream>
 using namespace std;
 
 int mincostpath(int r, int c, vector<vector<int>> &cost){
