@@ -36,4 +36,15 @@ Contains all the possible DSA codes I made over time, feel free to use it, will 
 4. [Atcoder](https://atcoder.jp/)
 
 
+
+## Coding can be done in any programming language😁
+
+The below resources will help you out in hard times I suppose :-
+
+1. [cpp best practices](https://github.com/cpp-best-practices/cppbestpractices)
+   
+2. [JSBooks](https://github.com/mystroken/JSBooks)
+
+
+
 ###  Open to modifications and improvement🧬.
