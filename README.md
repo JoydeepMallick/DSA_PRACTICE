@@ -45,6 +45,12 @@ The below resources will help you out in hard times I suppose :-
    
 2. [JSBooks](https://github.com/mystroken/JSBooks)
 
+3. [free algorithm books](https://github.com/cjbt/Free-Algorithm-Books)
 
+4. [Free algorithm books list in different programming language](https://github.com/GauravWalia19/Free-Algorithms-Books)
+
+5. [Free Programming books😲](https://github.com/EbookFoundation/free-programming-books)
+
+6. [influential cs books](https://github.com/EbookFoundation/free-programming-books)
 
 ###  Open to modifications and improvement🧬.
