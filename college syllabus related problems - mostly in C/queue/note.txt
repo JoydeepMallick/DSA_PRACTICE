@@ -1,0 +1,3 @@
+in linear queue each deque operation reduces array size by 1 hence to overcome this we can shift operate each time else we can simple use linedlist or circular queue.
+
+https://www.quora.com/How-is-a-circular-queue-better-than-a-linear-queue
