@@ -44,11 +44,32 @@ int unboundedknapsack_iterdp(int n, int W, vector<int> &val, vector<int> &wt){
     return dp[n-1][W];
 }
 
+int unboundedknapsack_1ddp(int n, int W, vector<int> &val, vector<int> &wt){
+    vector<int> prev(W+1, 0);
+    //when just one item to pick in different ranges of weight try to fillup knapsack by it 
+    for(int kW = 0; kW <= W; kW++){
+        prev[kW] = kW/wt[0] * val[0];
+    }
+
+    for(int i = 1; i < n; i++){
+        for(int kW = 0; kW <= W; kW++){
+            int nottake = prev[kW];
+            int take = 0;
+            if(wt[i] <= kW){
+                take = val[i] + prev[kW - wt[i]];
+            }
+            prev[kW] = max(take, nottake);
+        }
+    }
+    return prev[W];
+}
+
 int main(){
     int n = 3, W = 10;
     vector<int> val = { 5,11,13 }, wt = { 2,4,6 };
     //output = 27
     cout << unboundedknapsack_recurdp(n,W, val, wt) << endl;
     cout << unboundedknapsack_iterdp(n,W, val, wt) << endl;
+    cout << unboundedknapsack_1ddp(n,W, val, wt) << endl;
     return 0;
 }
