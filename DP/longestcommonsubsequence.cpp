@@ -143,6 +143,23 @@ int lcs_iter(string s, string t){
     return dp[ns][nt];
 }
 
+int lcs_opt(string s, string t){
+int ns = s.size(), nt = t.size();
+    //vector<vector<int>> dp(ns+1, vector<int> (nt+1, 0));
+    vector<int> prev(nt+1, 0), cur(nt+1, 0);
+    for(int i = 1; i <= ns; i++){
+        for(int j = 1; j <= nt; j++){
+            if(s[i-1] == t[j-1]){
+                cur[j] = 1 + prev[j-1];
+            }
+            else{
+                //1 based indexing for dp
+                cur[j] = max(prev[j], cur[j-1]);
+            }
+        }
+        prev= cur;
+    }
+    return prev[nt];}
 
 int main(){
     cout << longestCommonSubsequence("abcde", "ace") << endl;
