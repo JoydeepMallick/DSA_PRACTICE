@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+
+//-----------------------------------------leetcode-------------------------------------------
 int LCS(string &t1, string &t2, int ind_1, int ind_2){
     //base case
     if(ind_1 == t1.length() || ind_2 == t2.length()){
@@ -48,10 +50,10 @@ int LCSrecurDP(string t1, string t2, int ind_1, int ind_2,vector<vector<int>> &d
 int longestCommonSubsequence(string text1, string text2) {
     //we need to consider all possible subsequences via recursion
     /* return LCS(text1, text2, 0, 0); */
-    
+
     int n1 = text1.size(), n2 = text2.size();
     vector<vector<int>> dp(n1+1, vector<int>(n2+1,-1));
-/* return LCSrecurDP(text1,text2,0,0,dp); */
+    /* return LCSrecurDP(text1,text2,0,0,dp); */
     //intialize values of dp which will act as dummies in calculation and prevent out of bounds error of indices
     for(int i = 0; i <= n1; i++){
         for(int j = 0; j <= n2; j++){
@@ -100,6 +102,46 @@ int optmizedDP(string t1, string t2){
 
     return prevrow[n2];
 }
+//----------------------------------coding ninjas------------------------------------------------
+
+int f(string &s, string &t, int inds, int indt, vector<vector<int>> &dp){
+    if(inds < 0 || indt < 0){
+        return 0;
+    }
+
+    if(dp[inds][indt] != -1) return dp[inds][indt];
+
+    if(s[inds] == t[indt]){
+        return dp[inds][indt] = 1 + f(s,t, inds-1, indt-1, dp);
+    }
+    else{
+        return dp[inds][indt] = max(f(s,t,inds-1, indt, dp), f(s,t, inds, indt-1, dp));
+    }
+}
+
+int lcs(string s, string t){
+    int ns = s.size(), nt = t.size();
+    vector<vector<int>> dp(nt, vector<int> (nt, -1));
+    return f(s,t, ns-1, nt-1, dp);
+}
+
+
+int lcs_iter(string s, string t){
+    int ns = s.size(), nt = t.size();
+    vector<vector<int>> dp(ns+1, vector<int> (nt+1, 0));
+    for(int i = 1; i <= ns; i++){
+        for(int j = 1; j <= nt; j++){
+            if(s[i-1] == t[j-1]){
+                dp[i][j] = 1 + dp[i-1][j-1];
+            }
+            else{
+                //1 based indexing for dp
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+            }
+        }
+    }
+    return dp[ns][nt];
+}
 
 
 int main(){
@@ -112,5 +154,10 @@ int main(){
     cout << optmizedDP("abcde", "axdcrteghg") << endl;
     cout << optmizedDP("abc", "pqrs") << endl;
     cout << optmizedDP("ezupkr", "ubmrapg")<< endl;
+
+    string s = "adebc", t = "dcadb";
+    cout << lcs(s,t) << endl; // 3 
+    s = "ab", t = "defg";
+    cout << lcs(s,t) << endl; // 0 
     return 0;
 }
