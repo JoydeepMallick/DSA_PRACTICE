@@ -39,11 +39,21 @@ Contains all the possible DSA codes I made over time, feel free to use it, will 
 
 2. [CSES](https://cses.fi/problemset/)
 
-<h3>Online judges to practice even more problems on different judging platforms</h3>
+## When the Mathematics Crawlers bite you!
 
-1. [OJ-UZ](https://oj.uz)
+1. [ProjectEuler](https://projecteuler.net/)
 
-2. [BOJ](https://www.acmicpc.net/)
+## Solving problems of bioinformatics through coding
+
+1. [Rosalind](https://rosalind.info/problems/list-view/)
+
+## Online judges to practice even more problems on different judging platforms
+
+1. [SPOJ](https://www.spoj.com/problems/classical/)
+
+2. [OJ-UZ](https://oj.uz)
+
+3. [BOJ](https://www.acmicpc.net/)
 
 ## Coding can be done in any programming language😁
 
