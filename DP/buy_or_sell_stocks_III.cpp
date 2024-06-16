@@ -103,3 +103,19 @@ public:
         return after[true][0];
     }
 };
+
+//GREEDY
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int n = prices.size();
+        int firstbuy = INT_MAX, secondbuy = INT_MAX, firstsellprof = 0, secondsellprof = 0;
+        for(int i = 0; i < n ; i++){
+            firstbuy = min(firstbuy, prices[i]);
+            firstsellprof = max(firstsellprof, - firstbuy + prices[i]);
+            secondbuy = min(secondbuy, prices[i] - firstsellprof  );//second buy costs less than actual price as we made a profit and can use that money
+            secondsellprof = max(secondsellprof, -secondbuy + prices[i]);
+        }
+        return secondsellprof;
+    }
+};
