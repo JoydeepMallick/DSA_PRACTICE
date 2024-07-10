@@ -1,0 +1,20 @@
+//memoization
+
+int f(vector<int> &arr, int i, int j, vector<vector<int>> &dp){
+    if(i == j) return  0;
+    if(dp[i][j] != -1) return dp[i][j];
+    int mincost = 1e9;
+    for(int k = i; k <= j-1; k++){
+        int curcost =  f(arr, i, k, dp) + (arr[i-1]*arr[k]*arr[j]) + f(arr, k+1, j, dp);
+        mincost = min(mincost, curcost);
+    }
+    return dp[i][j] = mincost;
+}
+
+int matrixMultiplication(vector<int> &arr, int N)
+{
+    vector<vector<int>> dp(N, vector<int>(N, -1));
+    return f(arr, 1, N-1, dp);
+}
+
+
