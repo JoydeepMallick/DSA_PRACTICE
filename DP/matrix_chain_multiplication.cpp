@@ -17,4 +17,19 @@ int matrixMultiplication(vector<int> &arr, int N)
     return f(arr, 1, N-1, dp);
 }
 
-
+//tabulation
+int matrixMultiplication(vector<int> &arr, int N)
+{
+    vector<vector<int>> dp(N, vector<int>(N, 0));//handles base case of i=j
+    for(int i = N-1; i >= 1; i--){
+        for(int j = i+1; j < N; j++){
+            int mincost = 1e9;
+            for(int k = i; k <= j-1; k++){
+                int curcost = dp[i][k] + (arr[i-1]*arr[k]*arr[j]) + dp[k+1][j];
+                mincost = min(mincost, curcost);
+            }
+            dp[i][j] = mincost;
+        }
+    }
+    return dp[1][N-1];
+}
