@@ -1,0 +1,63 @@
+//memoization
+
+
+int mod = 1e9+7;
+
+int f(string &exp, int i, int j, bool needTrue, vector<vector<vector<long long>>> &dp){
+    if(i > j) return 0; // not needed as we do not hit here
+    
+    if(i == j){
+        if(needTrue) return (exp[i] == 'T');
+        else return (exp[i] == 'F');
+    }
+
+    if(dp[i][j][needTrue] != -1){
+        return dp[i][j][needTrue];
+    }
+
+    long long ways = 0ll;//reason being answer is huge and problem demands to return answer in modulo
+
+    //picking any one symbol but i and j point at operands
+    for(int ind = i+1; ind <= j-1; ind+=2){
+        long long lT = f(exp, i, ind-1, true, dp)%mod;
+        long long lF = f(exp, i, ind-1, false, dp)%mod;
+        long long rT = f(exp, ind+1, j, true, dp)%mod;
+        long long rF = f(exp, ind+1, j, false, dp)%mod;
+
+        if(exp[ind] == '&'){
+            if(needTrue){
+                ways = (ways + (lT * rT)%mod )%mod; 
+            }
+            else{
+                ways = (ways + (lT * rF)%mod + (lF * rT)%mod + (lF * rF)%mod )%mod;
+            }
+        }
+        else if(exp[ind] == '|'){
+            if(needTrue){
+                ways = (ways + (lT * rF)%mod + (lF * rT)%mod + (lT * rT)%mod )%mod;
+            }
+            else{
+                ways = (ways + (lF * rF)%mod )%mod;
+            }
+        }
+        else{
+            if(needTrue){
+                ways = (ways + (lT * rF)%mod + (lF * rT)%mod )%mod;
+            }
+            else{
+                ways = (ways + (lF * rF)%mod + (lT * rT)%mod )%mod;
+            } 
+        }
+    }
+    
+    return dp[i][j][needTrue] = ways%mod;
+}
+
+int evaluateExp(string &exp){
+    int n = exp.size();
+    vector<vector<vector<long long>>> 
+        dp(n, vector<vector<long long>> (n, vector<long long>(2, -1)));
+    return f(exp, 0, n-1, true, dp);//we need true in final result
+}
+
+//
