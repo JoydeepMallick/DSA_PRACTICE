@@ -73,4 +73,12 @@ The below resources will help you out in hard times I suppose :-
 
 6. [influential cs books](https://github.com/EbookFoundation/free-programming-books)
 
+## ⭐⭐⭐DSA sheets for Interviews
+
+1. [Striver's SDE sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
+
+2. [Arsh Goyal's DSA 60 day sheet](https://docs.google.com/spreadsheets/d/1MGVBJ8HkRbCnU6EQASjJKCqQE8BWng4qgL0n3vCVOxE/edit?gid=0#gid=0)
+
+3. [Parikh Jain DSA](https://docs.google.com/spreadsheets/d/1ckUXZLigWYNoEnewmXo_zaE1FTCLRPcRlLpxj6kDyVY/copy)
+
 ### Open to modifications and improvement🧬.
