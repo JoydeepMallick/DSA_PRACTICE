@@ -32,6 +32,6 @@ Node* deletekth(Node* head, int k) {
         prev = temp;
         temp = temp->next;
     }
-    delete temp1;
+    delete temp;
     return head;
 }

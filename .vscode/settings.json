@@ -1,3 +1,7 @@
 {
-    "C_Cpp.default.compilerPath": "wsl.localhost\\Debian\\usr\\bin\\g++"
+    "C_Cpp.default.compilerPath": "wsl.localhost\\Debian\\usr\\bin\\g++",
+    "files.associations": {
+        "vector": "cpp",
+        "iostream": "cpp"
+    }
 }
