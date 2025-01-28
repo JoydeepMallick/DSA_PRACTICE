@@ -1,5 +1,3 @@
-/****************************************************************
-Following is the Linked list node structure already written
 
 class Node
 {
@@ -12,7 +10,7 @@ public:
         next = NULL;
     }
 };
-*****************************************************************/
+
 
 Node* oddEvenList(Node* head)
 {
