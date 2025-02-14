@@ -23,6 +23,7 @@ class Solution {
         }
     
         int pairSum(ListNode* head) {
+            if(head == nullptr) return 0;
             ListNode* fast = head, *slow = head;
             while(fast != nullptr){//always even length
                 slow = slow->next;
