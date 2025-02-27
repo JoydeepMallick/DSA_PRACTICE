@@ -12,7 +12,7 @@
  */
 
 
- //recursive 
+
  Node* mergesortedLL(Node* t1, Node* t2){
 	Node *dummyHead = new Node(-1);
 	Node *tmp = dummyHead;
@@ -39,7 +39,7 @@
 }
 
 
-
+ //recursive 
 Node* flattenLinkedList(Node* head) 
 {
 	if(head == nullptr || head->next == nullptr) return head;
