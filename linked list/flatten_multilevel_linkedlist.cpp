@@ -1,19 +1,16 @@
-/*
- * Definition for linked list.
- * class Node {
- *  public:
- *		int data;
- *		Node *next;
- * 		Node *child;
- *		Node() : data(0), next(nullptr), child(nullptr){};
- *		Node(int x) : data(x), next(nullptr), child(nullptr) {}
- *		Node(int x, Node *next, Node *child) : data(x), next(next), child(child) {}
- * };
- */
+class Node {
+public:
+	int data;
+	Node *next;
+	Node *child;
+	Node() : data(0), next(nullptr), child(nullptr) {}
+	Node(int x) : data(x), next(nullptr), child(nullptr) {}
+	Node(int x, Node *next, Node *child) : data(x), next(next), child(child) {}
+};
 
 
 
- Node* mergesortedLL(Node* t1, Node* t2){
+Node* mergesortedLL(Node* t1, Node* t2){
 	Node *dummyHead = new Node(-1);
 	Node *tmp = dummyHead;
 	while(t1 != nullptr && t2 != nullptr){
@@ -27,16 +24,12 @@
 		tmp = tmp->child;
 		tmp->next = nullptr;
 	}
-	if(t1 != nullptr) tmp->child = t1;
-	else tmp->child = t2;
+	tmp->child = (t1 != nullptr)? t1:t2;
 	tmp->child->next = nullptr;
-	//Node* newhead = dummyHead->child;
-	//if(newhead != nullptr)newhead->next = nullptr;
-
-
 
 	return dummyHead->child;
 }
+
 
 
  //recursive 
