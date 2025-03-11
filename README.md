@@ -5,25 +5,31 @@ Contains all the possible DSA codes I made over time, feel free to use it, will 
 
 ## Youtube channels I prefer to study
 
-<h3> Best for indepth understanding and code explanation </h3>
+<h3> 🆒Best for indepth understanding and code explanation🆒 </h3>
 
-1. [Raj_Vikramaditya_aka_Striver](https://www.youtube.com/channel/UCJskGeByzRRSvmOyZOz61ig)
+[Raj_Vikramaditya_aka_Striver](https://www.youtube.com/channel/UCJskGeByzRRSvmOyZOz61ig)
+
+Nothing on YouTube really beats the indepth explanations he gives, take my word mate🧙‍♂️
 
 <h3> Best for theoretical understanding of DSA </h3>
 
-2. [Jennys_lectures](https://www.youtube.com/channel/UCM-yUTYGmrNvKOCcAl21g3w)
+Helps ace those theoretical questions in college exams😉
 
-3. [Gate_smashers](https://www.youtube.com/channel/UCJihyK0A38SZ6SdJirEdIOw)
+1. [Jennys_lectures](https://www.youtube.com/channel/UCM-yUTYGmrNvKOCcAl21g3w)
 
-4. [Abdul_Bari](https://www.youtube.com/@abdul_bari)
+2. [Gate_smashers](https://www.youtube.com/channel/UCJihyK0A38SZ6SdJirEdIOw)
 
-<h3> Best for guideline or roadmaps </h3>
+3. [Abdul_Bari](https://www.youtube.com/@abdul_bari)
 
-4. [Parikh_Jain](https://www.youtube.com/watch?v=qqvYFlBJMSw)
+<h3> For guideline or roadmaps </h3>
+
+1. [Parikh_Jain](https://www.youtube.com/watch?v=qqvYFlBJMSw)
 
 ## Best Place(s) to practice and grind yourself
 
 1. [LeetCode](https://leetcode.com/)
+
+2. [Code360 by Naukri(previously it was under CodingNinjas)](https://www.naukri.com/code360/problem-lists)
 
 <h3> Do try competitve programming😀 </h3>
 
@@ -63,17 +69,19 @@ Contains all the possible DSA codes I made over time, feel free to use it, will 
 
 The below resources will help you out in hard times I suppose :-
 
-1. [cpp best practices](https://github.com/cpp-best-practices/cppbestpractices)
+1. [Computer Programming resources](https://github.com/JoydeepMallick/Computer-Programming-Resources)
 
-2. [JSBooks](https://github.com/mystroken/JSBooks)
+2. [cpp best practices](https://github.com/cpp-best-practices/cppbestpractices)
 
-3. [free algorithm books](https://github.com/cjbt/Free-Algorithm-Books)
+3. [JSBooks](https://github.com/mystroken/JSBooks)
 
-4. [Free algorithm books list in different programming language](https://github.com/GauravWalia19/Free-Algorithms-Books)
+4. [free algorithm books](https://github.com/cjbt/Free-Algorithm-Books)
 
-5. [Free Programming books😲](https://github.com/EbookFoundation/free-programming-books)
+5. [Free algorithm books list in different programming language](https://github.com/GauravWalia19/Free-Algorithms-Books)
 
-6. [influential cs books](https://github.com/EbookFoundation/free-programming-books)
+6. [Free Programming books😲](https://github.com/EbookFoundation/free-programming-books)
+
+7. [influential cs books](https://github.com/EbookFoundation/free-programming-books)
 
 ## ⭐⭐⭐DSA sheets for Interviews
 
