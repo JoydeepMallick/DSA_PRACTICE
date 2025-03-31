@@ -1,23 +1,29 @@
 class Solution {
     public:
-        bool search(vector<int>& nums, int target) {
+        int findMin(vector<int>& nums) {
             int n = nums.size();
-            int low = 0, high = n-1;
+            int low = 0, high = n-1, minval = INT_MAX;
             while(low <= high){
                 int mid = low + (high - low)/2;
-                if(nums[mid] == target) return true;
-                //both seem to be sorted even if they are not
-                if(nums[low] == nums[mid] && nums[mid] == nums[high]){
+                //one section will be sorted and other wont
+                //since repeatition exist detection needs to managed for strange case
+                if(nums[low]  == nums[mid] && nums[mid] == nums[high]){
+                    minval = min( minval, nums[mid] );
                     low++;
                     high--;
-                }else if(nums[low] <= nums[mid]){
-                    if(nums[low] <= target && target <= nums[mid]) high = mid-1;
-                    else low = mid+1;
-                }else{
-                    if(nums[mid] <= target && target <= nums[high]) low = mid+1;
-                    else high = mid-1;
+                }
+    
+                //if left section is sorted
+                else if(nums[low] <= nums[mid]){
+                    minval = min(minval, nums[low]);
+                    low = mid+1;
+                }
+                //right section is sorted
+                else{
+                    minval = min(minval, nums[mid]);
+                    high = mid-1;
                 }
             }
-            return false;
+            return minval;
         }
     };
