@@ -5,8 +5,16 @@ int findKRotation(vector<int> &arr){
     int minind = n;
     while(low <= high){
         int mid = low + (high - low)/2;
+        //if entire array was sorted, we know all element are distinct
+        if(arr[low] <= arr[high]){
+            if(minind == n || arr[low] < arr[minind]){
+                minind = low;
+            }
+            break;
+        }
+
         //check if left is sorted
-        if(arr[low] <= arr[mid]){
+        else if(arr[low] <= arr[mid]){
             if(minind == n || arr[low] < arr[minind]){
                 minind = low;
             }
