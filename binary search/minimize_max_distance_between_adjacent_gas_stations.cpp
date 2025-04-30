@@ -25,30 +25,31 @@ double minimiseMaxDistance(vector<int> &arr, int k){
 
 
 // optimal 1 : using priority queues
-#include <queue>
+double numberofgasstations(vector<int> &arr, long double maxdist){
+	int cnt = 0;
+	int n = arr.size();
+	for(int i = 0; i < n-1; i++){
+		cnt += ceil((long double)(arr[i+1]-arr[i])/maxdist) -1;
+	}
+	return cnt;
+}
 
 double minimiseMaxDistance(vector<int> &arr, int k){
 	int n = arr.size();
-	vector<int> cntnewstations(n-1, 0);// count number of stations placed between arr[i] and arr[i+1]
-
-	priority_queue<pair<long double, int>> pq;
+	long double low = 0, high = 0;
+	//high is set to be the max difference among all
 	for(int i = 0; i < n-1; i++){
-		long double diff = (arr[i+1] - arr[i]);
-		pq.push({diff, i});
+		high = max(high, (long double)arr[i+1]-arr[i]);
 	}
-
-	for(int newstation = 1; newstation <= k; newstation++){
-		//find maximum ajacent distance between stations
-		int maxind = pq.top().second;			
-		pq.pop();
-		cntnewstations[maxind]++;//add 1 new station
-		long double newsectionsize = (long double)(arr[maxind+1] - arr[maxind]) / (long double)(cntnewstations[maxind]+1);
-		pq.push({newsectionsize, maxind});
+	long double diff = 1e-6;
+	while(high - low > diff){
+		long double mid = (high + low)/2.0;
+		int cnt = numberofgasstations(arr, mid) ;
+		if(cnt <= k){// try improve the answer by reducing it since its min of max
+			high = mid;
+		}
+		else low = mid;
 	}
-
-	return pq.top().first;
+	return high;
 }
-
-
-// most optimal : BS on floating points
 
