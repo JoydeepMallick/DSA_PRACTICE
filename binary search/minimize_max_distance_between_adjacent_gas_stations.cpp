@@ -50,5 +50,5 @@ double minimiseMaxDistance(vector<int> &arr, int k){
 }
 
 
-//optimal 2 : BS
+// most optimal : BS on floating points
 
