@@ -53,8 +53,8 @@ public:
         int n = n1+n2;
         int low = 0, high = n1;
         while(low <= high){
-            int mid1 = (low + high)/2; // or (low + high + 1)/2;
-            int mid2 = n/2 - mid1;
+            int mid1 = (low + high)/2; 
+            int mid2 = n/2 - mid1; // or int mid2 = (n+1)/2 - mid1;
             int l1 = (mid1 - 1 >= 0) ? nums1[mid1-1] : INT_MIN, 
                 l2 = (mid2 - 1 >= 0) ? nums2[mid2-1] : INT_MIN;
             int r1 = (mid1 < n1) ? nums1[mid1] : INT_MAX, 
