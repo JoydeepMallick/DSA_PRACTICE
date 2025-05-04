@@ -15,7 +15,6 @@ class Solution {
         vector<int> findPeakGrid(vector<vector<int>>& mat) {
             int r = mat.size(), c = mat[0].size();
             int low = 0, high = c-1;
-            int row = 0;
             while(low <= high){
                 int mid = (low + high)/2;
                 int maxrow = findMaxInCol(mat, mid);//up and down property satisfied here
