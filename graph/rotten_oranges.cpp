@@ -91,3 +91,53 @@ Every minute, any fresh orange that is 4-directionally adjacent to a rotten oran
     else cout << "Total time taken to rot all oranges : -  " << ans << endl;
     return 0;
 }
+
+
+// a different approach to reduce space and time by a bit
+class Solution {
+    public:
+        int orangesRotting(vector<vector<int>>& grid) {
+            //bfs implementation
+            queue<pair<int, int>> q;
+            //insert all rotten orange locations with 0 time infection
+            int m = grid.size(), n = grid[0].size();
+            vector<vector<int>> vis(m, vector<int>(n, 0));
+            int cntfreshoranges = 0;
+            for(int i = 0; i < m; i++){
+                for(int j = 0; j < n; j++){
+                    if(grid[i][j] == 2) {
+                        q.push({i,j});
+                        vis[i][j] = 2;//mark visited cells
+                    }else if(grid[i][j] == 1){
+                        cntfreshoranges++; 
+                    }
+                }
+            }
+    
+            //bfs with increasing time
+            int maxtime = -1;//since we need the answer of 0 if no orange can be rotten except for already rotten ones, helps ease calculations
+            while(!q.empty()){
+                int qsize = q.size();
+                while(qsize--){
+                    int x = q.front().first, y = q.front().second;
+                    q.pop();
+                    int dx[] = {0,1,0,-1};
+                    int dy[] = {1,0,-1,0};
+                    for(int i = 0; i < 4; i++){
+                        int newx = x + dx[i], newy = y + dy[i];
+                        if(newx >= 0 && newx < m && newy >= 0 && newy < n 
+                        && grid[newx][newy] == 1 && !vis[newx][newy]){
+                            //rot the new orange and increase time
+                            vis[newx][newy] = 2;
+                            cntfreshoranges--;//1 fresh orange was rotten
+                            q.push({newx, newy});
+                        }
+                    }
+                }
+                maxtime++;
+            }
+            //check if any fresh orange was unrotten
+            if(cntfreshoranges > 0) return -1;
+            return maxtime;
+        }
+    };
