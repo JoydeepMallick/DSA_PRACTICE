@@ -138,6 +138,7 @@ class Solution {
             }
             //check if any fresh orange was unrotten
             if(cntfreshoranges > 0) return -1;
+            if(maxtime == -1) return 0;// nothing rotten found
             return maxtime;
         }
     };
