@@ -18,7 +18,8 @@ int numberOfEnclaves(vector<vector<int>> &grid){
             //first row, first column, last row, last column 
             q.push({i,j});
 /* cout << i << " ," << j << endl; */
-            vis[i][j] = 1;
+            vis[i][j] = 1; //<-- do mark visited immediately after pushing to avoid same coordinate getting pushed multiple times when queue traversal starts
+
            }
         }
     }
@@ -38,7 +39,7 @@ int numberOfEnclaves(vector<vector<int>> &grid){
                 !vis[nxtrow][nxtcol]
             ){
                 q.push({nxtrow, nxtcol});
-                vis[nxtrow][nxtcol] = 1;
+                vis[nxtrow][nxtcol] = 1;// <-- do mark visited immediately after pushing to avoid same coordinate getting pushed multiple times when queue traversal starts
             }
         }
     }
