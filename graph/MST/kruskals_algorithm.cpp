@@ -47,7 +47,7 @@ int kruskalMST(int n, vector<vector<int>> &edges)
     sort(edges.begin(), edges.end(), [](vector<int> edge1, vector<int> edge2)
          { return edge1[2] < edge2[2]; });
 
-    DisjointSet ds = DisjointSet(n);
+    DisjointSet ds(n);
 
     vector<vector<int>> MST;
     int cost = 0;
