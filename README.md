@@ -92,3 +92,36 @@ The below resources will help you out in hard times I suppose :-
 3. [Parikh Jain DSA](https://docs.google.com/spreadsheets/d/1ckUXZLigWYNoEnewmXo_zaE1FTCLRPcRlLpxj6kDyVY/copy)
 
 ### Open to modifications and improvement🧬.
+
+## 📊 DSA Progress Tracker
+
+Tracking my progress across core DSA topics.  
+✅ = Completed | 🚧 = In Progress
+
+| Topic | Status |
+|-------|--------|
+| <div align="center"><b>Core Foundations</b></div> | |
+| Arrays | ✅ |
+| Strings |  |
+| Recursion & Backtracking | ✅ |
+| Bit Manipulation | 🚧 |
+| <div align="center"><b>Linear Data Structures</b></div> | |
+| Linked List (Singly, Doubly, Circular) | ✅ |
+| Stack | 🚧 |
+| Queue & Deque | 🚧 |
+| <div align="center"><b>Non-Linear Data Structures</b></div> | |
+| Trees (Binary Tree, BST) | ✅ |
+| Binary Heap / Priority Queue | 🚧 |
+| Graphs (DFS, BFS, Shortest Paths, MST) | ✅ |
+| Tries |  |
+| <div align="center"><b>Algorithms</b></div> | |
+| Searching (Binary Search & Variants) | ✅ |
+| Sorting (Merge, Quick, Heap, etc.) | ✅ |
+| Divide and Conquer | 🚧 |
+| Greedy Algorithms |  |
+| Dynamic Programming (1D, 2D, Knapsack, LIS, etc.) | ✅ |
+| <div align="center"><b>Advanced Topics</b></div> | |
+| Segment Trees & Fenwick Tree (BIT) |  |
+| Disjoint Set Union (Union-Find) | ✅ |
+| String Algorithms (KMP, Z-Algorithm, Rabin-Karp) |  |
+| Graph Advanced (Flow, Bridges, Articulation Points, Kosaraju and Tarjan) | ✅ |
